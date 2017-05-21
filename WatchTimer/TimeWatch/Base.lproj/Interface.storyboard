@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="TimeWatch" customModuleProvider="target">
+                    <items>
+                        <dateLabel alignment="left" id="eFv-QL-a1I">
+                            <dateFormatterStyle key="dateStyle" short="YES"/>
+                            <dateFormatterStyle key="timeStyle" short="YES"/>
+                        </dateLabel>
+                        <timer alignment="left" id="Mhj-eM-0nm"/>
+                        <button width="1" alignment="left" title="Start Timer" id="eSD-aM-8bA">
+                            <connections>
+                                <action selector="startTimer" destination="AgC-eL-Hgc" id="3gL-vr-vTF"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Stop Timer" id="Y0u-wT-h9i">
+                            <connections>
+                                <action selector="stopTimer" destination="AgC-eL-Hgc" id="NtU-V7-lj2"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="myTimer" destination="Mhj-eM-0nm" id="yNF-nA-ZdI"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>
